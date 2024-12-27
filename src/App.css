@@ -1,0 +1,126 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root{
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --background-dark-color: #10121A;
+  --background-dark-grey: #191D2B;
+  --border-color: #2e344e;
+  --background-light-color: #F1F1F1;
+  --background-light-color-2: rgba(3, 127, 255, 0.3);
+  --white-color: #FFF;
+  --font-light-color: #a4acc4;
+  --font-dark-color: #313131;
+  --font-dark-color-2: #151515;
+  --sidebar-dark-color: #191D2B;
+}
+
+body{
+  font-family: 'Nunito', sans-serif;
+  background-color: var(--background-dark-color);
+  color: var(--font-light-color);
+}
+
+.App-header{
+  display: flex;
+  position: fixed;
+  width: 100%;
+  justify-content: space-between;
+  padding: 40px 3em;
+  background-color: var(--background-dark-color);
+}
+
+.App-header h1{
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--white-color);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input{
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.chat-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100svh;
+  padding-top: 100px;
+}
+
+.chat-container .chat-box{
+  width: 95%;
+  max-width: 600px;
+  height: 60%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow-y: scroll;
+}
+
+.chat-container .chat-box::-webkit-scrollbar{
+  width: 10px;
+}
+
+.chat-container .chat-box::-webkit-scrollbar-thumb{
+  background-color: var(--primary-color);
+  border-radius: 10px;
+}
+
+
+.chat-container .chat-box .message{
+  display: inline-block;
+  padding: 10px 20px;
+  width: 90%;
+  font-weight: bold;
+  background-color: var(--background-light-color);
+  color: var(--font-dark-color);
+  border-radius: 10px;
+  margin: 10px;
+  left: 0;
+}
+
+.chat-container .chat-box .message.ai{
+  align-self: flex-start;
+  float: left;
+}
+
+.chat-container .chat-box .message.user{
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  align-self: flex-end;
+  float: right;
+}
+
+.chat-container .input-box{
+  width: 95%;
+  max-width: 600px;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chat-container .input-box input{
+  width: 80%;
+}
